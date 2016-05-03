@@ -56,7 +56,7 @@ impActData <- ddply(rawActData, ~ interval, transform, steps = impute.mean(steps
 totImpDailySteps <- tapply(impActData$steps, impActData$date, sum)
 totImpDailyMean <- mean(totDailySteps)
 totImpDailyMedian <- median(totDailySteps)
-hist(totImpDailySteps, main="Histogram of total steps taken per day", ylab= "Total steps taken per day", xlab="Days with this number of steps")
+hist(totImpDailySteps, main="Histogram of total steps taken per day", xlab= "Total steps taken per day", ylab="Days with this number of steps")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
